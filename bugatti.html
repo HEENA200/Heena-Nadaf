@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .car-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .car-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+
+        .car-logo {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Catalog</h1><br>
+    <button type="submit"><a href="home.html">Back</a></button>	
+    <div class="car-list">
+        
+
+        <h1>Bugatti</h1>
+        <div class="car-item">
+            <img src="bolide.jpg" alt="Car 3" class="car-logo" onclick="window.location.href='buy.html?car=car3'">
+            <h2>Bugatti Bolide</h2>
+            <button class="button" onclick="window.location.href='b21.html'">Check out</button>
+        </div><div class="car-item">
+            <img src="chiron-pursport.jpg" alt="Car 3" class="car-logo" onclick="window.location.href='buy.html?car=car3'">
+            <h2>Bugatti Chiron Pur Sport</h2>
+            <button class="button" onclick="window.location.href='b22.html'">Check out</button>
+        </div><div class="car-item">
+            <img src="contodieci.jpg" alt="Car 3" class="car-logo" onclick="window.location.href='buy.html?car=car3'">
+            <h2>Bugatti Centodieci</h2>
+            <button class="button" onclick="window.location.href='b23.html'">Check outw</button>
+        </div><div class="car-item">
+            <img src="la-voiture-noire.jpg" alt="Car 3" class="car-logo" onclick="window.location.href='buy.html?car=car3'">
+            <h2>Bugatti La Voiture Noire</h2>
+            <button class="button" onclick="window.location.href='b24.html'">Check out</button>
+        </div>
+        
+       
+    </div>
+  
+   
+   
+    
+
+   
+</body>
+</html>

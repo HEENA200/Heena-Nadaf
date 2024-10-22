@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Catalog</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .car-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .car-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 200px;
+            text-align: center;
+        }
+
+        .car-logo {
+            width: 100%;
+            cursor: pointer;
+        }
+
+        .button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Catalog</h1><br>
+
+    <div class="car-list">
+        
+        <h1>Audi</h1>
+        <div class="car-item">
+            <img src="audi-a8.jpg" alt="Car 3" class="car-logo" onclick="window.location.href='buy.html?car=car3'">
+            <h2>Audi A8</h2>
+            <button class="button" onclick="window.location.href='b25.html'">Check out</button>
+        </div><div class="car-item">
+            <img src="audi-r7.jpg" alt="Car 3" class="car-logo" onclick="window.location.href='buy.html?car=car3'">
+            <h2>Audi RS7</h2>
+            <button class="button" onclick="window.location.href='b26.html'">Check out</button>
+        </div>
+       
+    </div>
+  
+   
+   
+    
+
+   
+</body>
+</html>

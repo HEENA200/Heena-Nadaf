@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Accessories</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .grid-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .grid-item {
+            background: #fff;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+        }
+
+        .price {
+            font-size: 18px;
+            color: #007bff;
+            margin-top: 10px;
+        }
+
+        .button {
+            margin-top: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Accessories</h1>
+
+    <div class="grid-container">
+        <div class="grid-item">
+            <img src="air.jpg" alt="Air Filter">
+            <h3>Air Filter</h3>
+            <p class="price">Rs.5,000</p>
+            <button class="button" onclick="buyProduct('Air Filter')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="brk.jpg" alt="Brake Pads">
+            <h3>Brake Pads</h3>
+            <p class="price">Rs.4,900</p>
+            <button class="button" onclick="buyProduct('Brake Pads')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="oil.jpg" alt="Oil Filter">
+            <h3>Oil Filter</h3>
+            <p class="price">Rs.200</p>
+            <button class="button" onclick="buyProduct('Oil Filter')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="bul.jpg" alt="Headlight Bulbs">
+            <h3>Headlight Bulbs</h3>
+            <p class="price">Rs.500</p>
+            <button class="button" onclick="buyProduct('Headlight Bulbs')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="w.jpg" alt="Windshield Wipers">
+            <h3>Windshield Wipers</h3>
+            <p class="price">Rs.3,000</p>
+            <button class="button" onclick="buyProduct('Windshield Wipers')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="mat.jpg" alt="Car Mats">
+            <h3>Car Mats</h3>
+            <p class="price">Rs.5,800</p>
+            <button class="button" onclick="buyProduct('Car Mats')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="sp.jpg" alt="Speakers">
+            <h3>Speakers</h3>
+            <p class="price">Rs.10,000</p>
+            <button class="button" onclick="buyProduct('Speakers')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="sv.jpg" alt="Seat Covers">
+            <h3>Seat Covers</h3>
+            <p class="price">Rs.5,000</p>
+            <button class="button" onclick="buyProduct('Seat Covers')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="ng.jpg" alt="Bearings">
+            <h3>Bearings</h3>
+            <p class="price">Rs.7,000</p>
+            <button class="button" onclick="buyProduct('Bearings')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="eng.jpg" alt="Engine Cooler">
+            <h3>Engine Cooler</h3>
+            <p class="price">Rs.5,000</p>
+            <button class="button" onclick="buyProduct('Engine Cooler')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="dis.jpg" alt="Display">
+            <h3>Display</h3>
+            <p class="price">Rs.1,000</p>
+            <button class="button" onclick="buyProduct('Display')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="rad.jpg" alt="Radio Antenna">
+            <h3>Radio Antenna</h3>
+            <p class="price">Rs.500</p>
+            <button class="button" onclick="buyProduct('Radio Antenna')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="cam.jpg" alt="Camera">
+            <h3>Camera</h3>
+            <p class="price">Rs.5,3000</p>
+            <button class="button" onclick="buyProduct('Camera')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="fre.jpg" alt="Air Freshener">
+            <h3>Air Freshener</h3>
+            <p class="price">Rs.530</p>
+            <button class="button" onclick="buyProduct('Air Freshener')">Buy Now</button>
+        </div>
+        <div class="grid-item">
+            <img src="cv.jpg" alt="Car Cover">
+            <h3>Car Cover</h3>
+            <p class="price">Rs.5,000</p>
+            <button class="button" onclick="buyProduct('Car Cover')">Buy Now</button>
+        </div>
+    </div>
+
+    <script>
+        function buyProduct(productName) {
+            localStorage.setItem('selectedProduct', productName);
+            window.location.href = 'buy.html'; // Redirect to the payment page
+        }
+    </script>
+</body>
+</html>

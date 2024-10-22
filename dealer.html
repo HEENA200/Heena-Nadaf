@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Find A Dealer</title>
+    <style>
+        body {
+            background-color: #2c2c54; 
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; /
+        font-family:serif;
+        }
+
+        form {
+            background-color: rgb(73, 41, 103);
+            border-radius: 8px; 
+            width: 400px;
+            padding: 30px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); 
+        }
+
+        h1 {
+            color: antiquewhite;
+            margin-bottom: 15px; 
+        }
+
+        p {
+            color: aliceblue;
+            margin-bottom: 20px; 
+        }
+
+        input {
+            width: calc(100% - 20px); 
+            color: aliceblue;
+            background-color: rgb(42, 26, 57);
+            padding: 10px;
+            border: 1px solid aliceblue; 
+            border-radius: 4px; 
+            margin-bottom: 15px;
+        }
+
+        button {
+            background-color: blueviolet;
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer; 
+            transition: background-color 0.3s; 
+        }
+
+        button:hover {
+            background-color: #7a5fbb; 
+        }
+
+        a {
+            color: aliceblue;
+            text-decoration: none; /
+           margin-top: 10px;
+            display: inline-block; 
+        }
+
+        .location-button {
+            background-color: #28a745; 
+            margin-top: 10px;
+        }
+
+        .location-button:hover {
+            background-color: #218838; 
+        }
+    </style>
+</head>
+<body>
+    <form action="">
+        <h1>Find A Dealer</h1>
+        <p>You will be directed to the page of our authorised dealers. LoremIpsum Motor cars limited accepts no liabilities or responsibility for the information, views, or options contained therein.</p>
+        <input type="text" placeholder="City" required>
+        <input type="text" placeholder="Country" required>
+        
+        <button type="submit">Search</button>
+        <p><a style="text-decoration: none;" onclick="getLocation()">Use my location</a></p>
+        <button type="submit"><a href="home.html">Back</a></button>	
+    </form>
+
+    <script>
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(showPosition, showError);
+            } else {
+                alert("Geolocation is not supported by this browser.");
+            }
+        }
+
+        function showPosition(position) {
+            // Here you can implement what happens after getting the location
+            alert("Latitude: " + position.coords.latitude + 
+                  "\nLongitude: " + position.coords.longitude);
+            // Optionally, you can populate the city/country fields with the reverse geocoding data.
+        }
+
+        function showError(error) {
+            switch(error.code) {
+                case error.PERMISSION_DENIED:
+                    alert("User denied the request for Geolocation.");
+                    break;
+                case error.POSITION_UNAVAILABLE:
+                    alert("Location information is unavailable.");
+                    break;
+                case error.TIMEOUT:
+                    alert("The request to get user location timed out.");
+                    break;
+                case error.UNKNOWN_ERROR:
+                    alert("An unknown error occurred.");
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Process</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+        }
+        h1 { color: #333; }
+        .step { background: #fff; padding: 20px; margin: 10px 0; border-radius: 5px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        .button { margin-top: 10px; padding: 10px 15px; background-color: #007bff; color: white; border: none; border-radius: 5px; cursor: pointer; }
+        .button:hover { background-color: #0056b3; }
+        .hidden { display: none; }
+    </style>
+    <script src="https://js.stripe.com/v3/"></script>
+</head>
+<body>
+    <h1>Payment Process</h1>
+
+    <div class="step">
+        <h2>Step 1: Select Product</h2>
+        <p>Please select the product you wish to purchase from our catalog.</p>
+        <button class="button" onclick="window.location.href='allpro.html'">Select Product</button>
+    </div>
+
+    <div class="step">
+        <h2>Step 2: Payment Method</h2>
+        <p>Select your payment method:</p>
+        <select id="paymentMethod">
+            <option value="credit_card">Credit Card</option>
+            <option value="paypal">PayPal</option>
+            <option value="bank_transfer">Bank Transfer</option>
+        </select>
+    </div>
+
+    <div class="step">
+        <h2>Step 3: Enter Payment Details</h2>
+        <form id="payment-form">
+            <div id="card-element"><!-- A Stripe Element will be inserted here. --></div>
+            <button class="button" id="submit-button">Pay Now</button>
+            <div id="payment-message" class="hidden"></div>
+        </form>
+    </div>
+    <div id="car-details"></div>
+    <script>
+        // Initialize Stripe
+        const stripe = Stripe('YOUR_PUBLIC_STRIPE_API_KEY');
+        const elements = stripe.elements();
+        const cardElement = elements.create('card');
+        cardElement.mount('#card-element');
+
+        const form = document.getElementById('payment-form');
+        form.addEventListener('submit', async (event) => {
+            event.preventDefault();
+            const { paymentMethod, error } = await stripe.createPaymentMethod({
+                type: 'card',
+                card: cardElement,
+            });
+
+            if (error) {
+                // Display error.message in your UI
+                document.getElementById('payment-message').textContent = error.message;
+                document.getElementById('payment-message').classList.remove('hidden');
+            } else {
+                // Payment successful, show confirmation
+                alert('Payment Successful! Payment Method ID: ' + paymentMethod.id);
+                // Here you can also send the paymentMethod.id to your server for processing
+            }
+        });
+        const urlParams = new URLSearchParams(window.location.search);
+        const car = urlParams.get('car');
+
+        document.getElementById('car-details').innerHTML = `You are about to buy: <strong>${car}</strong>`;
+    </script>
+</body>
+</html>

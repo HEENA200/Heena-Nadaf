@@ -1,0 +1,243 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        nav {
+            color: aliceblue;
+            background-color: rgb(11, 6, 6);
+            width: 100%;
+            height: 60px;
+            display: flex;
+            align-items: center;
+            padding: 10px;
+            justify-content: space-between;
+        }
+
+        .logo {
+            color: rgb(218, 153, 32);
+            font-weight: 800;
+            cursor: pointer;
+            font-family: serif;
+        }
+
+        .search-container {
+            position: relative;
+            margin-left: auto;
+        }
+
+        .search-bar {
+            width: 150px; /* Reduced length */
+            padding: 5px 40px 5px 10px; /* Add padding to the left for the icon */
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .search-icon {
+            position: absolute;
+            right: 10px; /* Position the icon inside the input */
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+            color: gray;
+        }
+
+        .button {
+            margin-left: 10px;
+            padding: 10px 15px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .button:hover {
+            background-color: #0056b3;
+        }
+
+        .container {
+            position: relative;
+            text-align: center;
+            color: white;
+        }
+
+        .img {
+            background-image: url("car.jpg");
+            width: 100%;
+            height: 500px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: cover;
+        }
+
+        .top-right {
+            position: absolute;
+            top: 35px;
+            right: 80px;
+            font-size: x-large;
+            font-weight: 900;
+            color: black;
+        }
+
+        .grid-container {
+            display: grid; 
+            grid-template-columns: repeat(2, 1fr);
+            grid-gap: 10px;
+            padding: 10px;
+        }
+
+        .grid-contain {
+            display: grid; 
+            grid-template-columns: auto auto auto auto;
+            grid-gap: 1px;
+            background-color: #141212;
+            padding: 2px;
+        }
+
+        .grid-item {
+            background-color: rgb(245, 243, 246);
+            color: aquamarine;
+            padding: 20px;
+            text-align: center;
+        }
+
+        img {
+            width: 100%; /* Make images responsive */
+            height: auto; /* Maintain aspect ratio */
+            padding: 4px; /* Add spacing around images */
+            cursor: pointer; /* Change cursor to pointer on hover */
+        }
+
+        p {
+            font-size: 20px;
+        }
+        .info{
+            background-color: #141212;
+            color: aliceblue;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            padding-left: 40px;
+            word-spacing: 10px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <h1 class="logo" id="logo">LOREMIPSUM</h1>
+            <div class="search-container">
+                <input type="text" placeholder="  .....Search" class="search-bar" id="searchBar">
+                <span class="search-icon" onclick="search()">🔍</span>
+            </div>
+            <div>
+                <button class="button" id="buyBtn"><a href="acess.html">Buy</a></button>
+                <button class="button" id="sellBtn"><a href="sale.html">Sell</a></button>
+                <button class="button" id="accessoriesBtn"><a href="acess.html">Accessories</a></button>
+            </div>
+        </nav>
+    </header> 
+    <div class="container">
+        <div class="img"> 
+            <div class="top-right">Find your dream car</div>
+        </div>
+    </div> 
+
+    <div class="grid-container">
+        <div class="grid-item"><a href="t1.html"><img src="ma.jpg" alt="Car"></a></div>
+        <div class="grid-item"><a href="t2.html"><img src="OIP.jpg" alt="Rocks"></a></div>
+        <div class="grid-item"><a href="t3.html"><img src="m.jpg" alt="Falls"></a></div>
+        <div class="grid-item"><a href="t4.html"><img src="thar.jpg" alt="Paris"></a></div>
+        <div class="grid-item"><a href="t5.html"><img src="m1.jpg" alt="Nature"></a></div>
+        <div class="grid-item"><a href="t6.html"><img src="b.jpg" alt="Mist"></a></div>
+        <div class="grid-item"><a href="t7.html"><img src="r.jpg" alt="Underwater"></a></div>
+        <div class="grid-item"><a href="t8.html"><img src="a.jpg" alt="Ocean"></a></div>
+        <div class="grid-item"><a href="t9.html"><img src="s.jpg" alt="Wedding"></a></div>
+        <div class="grid-item"><a href="t10.html"><img src="f.jpg" alt="Mountains and Skies"></a></div>
+    </div>
+
+    <div class="grid-contain">
+        <div class="grid-item"><a href="ford.html"><img src="fo.jpg" alt="symbol"></a></div>
+        <div class="grid-item"><a href="lamb.html"><img src="lamb.jpg" alt="symbol"></a></div>
+        <div class="grid-item"><a href="mer-B.html"><img src="mer.jpg" alt="symbol"></a></div>
+        <div class="grid-item"><a href="bmw.html"><img src="bmw.jpg" alt="symbol"></a></div>
+        <div class="grid-item"><a href="bugatti.html"><img src="buga.jpg" alt="symbol"></a></div>
+        <div class="grid-item"><a href="ferrari.html"><img src="fara.jpg" alt="symbol"></a></div>
+        <div class="grid-item"><a href="RR.html"><img src="roy.jpg" alt="symbol"></a></div>
+        <div class="grid-item"><a href="suz.html"><img src="suz.webp" alt="symbol"></a></div>
+        <div class="grid-item"><a href="tesla.html"><img src="tes.jpg" alt="symbol"></a></div>
+        <div class="grid-item"><a href="mahindra.html"><img src="mah.jpg" alt="symbol"></a></div>
+        <div class="grid-item"><a href="ren.html"><img src="ren.png" alt="symbol"></a></div>
+        <div class="grid-item"><a href="audi.html"><img src="aud.jpg" alt="symbol"></a></div>
+    </div>
+    <div class="info">
+    <h1>Welcome to your dream sites</h1>
+    <p> this is the page were you can get what you actually deserve</p>
+    <P>for more information visite our social media sites</P>
+    <h4><a href="http://instagram.com/username"> instagram</a></h4>
+    <h4><a href="http://www.facebook.com/xyz">facebook</a></h4>
+    <h4><a href="http://x.com/home?lang=fr">tweeter</a></h4>
+        
+        
+   
+</div>
+    <script>
+        // Mapping car names to their respective URLs
+        const carMap = {
+            "ford": "ford.html",
+            "lamborghini": "lamb.html",
+            "mercedes": "mer-B.html",
+            "bmw": "bmw.html",
+            "bugatti": "bugatti.html",
+            "ferrari": "ferrari.html",
+            "rolls royce": "RR.html",
+            "suzuki": "suz.html",
+            "tesla": "tesla.html",
+            "mahindra": "mahindra.html",
+            "renault": "ren.html",
+            "audi": "audi.html",
+            // Add more mappings as needed
+        };
+
+        document.getElementById('buyBtn').onclick = function() {
+            window.location.href = 'buy.html'; 
+        };
+
+        document.getElementById('sellBtn').onclick = function() {
+            window.location.href = 'sale.html';
+        };
+
+        document.getElementById('accessoriesBtn').onclick = function() {
+            window.location.href = 'acess.html'; 
+        };
+
+        function search() {
+            const query = document.getElementById('searchBar').value.toLowerCase().trim();
+            const url = carMap[query]; // Get the URL from the mapping
+
+            if (url) {
+                window.location.href = url; // Redirect to the corresponding URL
+            } else {
+                alert("Car not found!"); // Alert if car is not found
+            }
+        }
+
+        document.getElementById('searchBar').onkeydown = function(event) {
+            if (event.key === 'Enter') {
+                search();
+            }
+        };
+    </script>
+</body>
+</html>
