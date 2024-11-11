@@ -1,81 +1,149 @@
-body {
+body{
     margin: 0;
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
     background-image: url("c.jpg");
     background-attachment: fixed;
     background-size: cover;
+ 
 }
 
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    flex: 1;
-}
 
-nav {
-    width: 100%;
-    background-color: rgba(43, 38, 38, 0.573);
-    color: rgb(191, 126, 35);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-}
 
-.logo {
+
+.logo{
+    color: rgb(218, 153, 32);
     font-weight: 800;
+    text-align: left;
+}
+nav{
+    
+        padding-left: 100%;
+        color: aliceblue;
+        background-color:rgba(43, 38, 38, 0.573);
+        width:98.8%;
+        height:60px;
+        display:flex;
+        display:inline-flex;
+        padding:10px ;
+        align-items:right;
+        font-weight: 400 solid;
+    
+        
 }
 
-.log {
-    margin: 20px 0;
+
+.form{
+    align-items: center;
+    background-color: aquamarine;
+    background-position:50px;
+
+}
+.a:hover{
+    color: chocolate;
+}
+#menu{
+    border: 0cap;
+    padding-bottom: 5px;
+    border-radius: 80px;
+    height: 25px;
+}
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
+}
+.menu-icon {
+
+    cursor:pointer;
+    font-size:5px;
+    margin: 0px;
+    background: none;
+    color: rgb(211, 173, 60);
+}
+.menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    background: rgb(251, 244, 244);
+    box-shadow: 0px 2px 10px rgb(233, 135, 135);
+    margin-top: 10px; /* Adjust based on your design */
+}
+.menu.active {
     display: flex;
-    justify-content: flex-end;
-    width: 100%;
 }
-
-.lo {
-    background-color: rgb(209, 150, 23);
-    color: rgb(16, 16, 16);
-    border: none;
-    padding: 10px 20px;
-    transition: background-color 0.3s;
+.menu-option {
+    padding: 10px;
+    text-align: center;
+    background-color: aliceblue;
 }
-
-.lo:hover {
+.menu-option:hover {
     background-color: #a23636;
 }
-
-.h2 {
-    text-align: center;
-    margin-top: 20px;
-    background-attachment: fixed;
-    padding-top: 180px;
+img{
+    background: none;
+    width: 30px;
+    height: 20px;
 }
-
-.h {
+.log{
+    padding-left: 93%;
+    
+}
+.lo{
+    color: rgb(16, 16, 16);
+    background-color: rgb(209, 150, 23);
+    width: 50px;
+    height: 30px;
+  
+}
+.lo:hover{
+   background-color: #a23636;
+}
+.h{
     color: rgb(213, 139, 28);
+    
     font-style: italic;
     font-family: serif;
 }
-
-.h1 {
+.h1{
     color: aliceblue;
     font-style: italic;
     font-family: serif;
-    background-attachment: fixed;
+
+}
+.h2{
+    padding-top: 18%;
+    padding-left: 45%;
+}
+/* animations.css */
+
+.fade-in {
+    opacity: 0;
+    animation: ease-in.10s forwards; 
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {
-    nav {
-        flex-direction: column;
-        align-items: center;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
     }
-
-    .log {
-        justify-content: center;
+    to {
+        opacity: 1;
     }
 }
+/* div {
+    width: 100px;
+    height: 100px;
+    background: red;
+    position: relative;
+    animation-name: example;
+    animation-duration: 3s;  
+    animation-fill-mode: forwards;
+  }
+  
+  @keyframes example {
+    from {top: 0px;}
+    to {top: 200px; background-color: blue;}
+  } */
